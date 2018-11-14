@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Simple UI Quest</string>
+    <string name="first_name">Firstname</string>
+    <string name="last_name">Lastname</string>
+    <string name="be_wilder">Yes, I want to be a wilder!</string>
+    <string name="accept">Accept</string>
+    <string name="welcome">Welcome to the Wild Code School</string>
+</resources>
