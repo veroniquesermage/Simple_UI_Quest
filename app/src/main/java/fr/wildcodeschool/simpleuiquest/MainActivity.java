@@ -29,43 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
         final CheckBox isWilder = findViewById(R.id.checkBox);
 
+        final TextView congratulation = findViewById(R.id.textView2);
+
         isWilder.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (isWilder.isChecked()) {
 
                     fnTxt.setEnabled(true);
                     lnTxt.setEnabled(true);
-
-                    button.setOnClickListener(new View.OnClickListener() {
-
-                        public void onClick(View v) {
-                            Context context = getApplicationContext();
-
-                            String lText = lnTxt.getText().toString();
-                            String fText = fnTxt.getText().toString();
-
-
-                            if (lText.matches("") || fText.matches("")) {
-                                CharSequence textError = "Please fill your firstname and lastname";
-                                int duration = Toast.LENGTH_SHORT;
-
-                                Toast toast = Toast.makeText(context, textError, duration);
-                                toast.show();
-
-                                toast.setGravity(Gravity.BOTTOM | Gravity.BOTTOM, 0, 0);
-                            } else {
-                                CharSequence text = "Congratulation " + fnTxt.getText() + " " + lnTxt.getText();
-
-                                int duration = Toast.LENGTH_SHORT;
-
-                                Toast toast = Toast.makeText(context, text, duration);
-                                toast.show();
-
-                                toast.setGravity(Gravity.BOTTOM | Gravity.BOTTOM, 0, 0);
-                            }
-
-                        }
-                    });
                 } else {
                     fnTxt.setEnabled(false);
                     lnTxt.setEnabled(false);
@@ -73,5 +44,39 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        button.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Context context = getApplicationContext();
+
+                String lText = lnTxt.getText().toString();
+                String fText = fnTxt.getText().toString();
+
+
+                if (lText.matches("") || fText.matches("")) {
+                    CharSequence textError = getString(R.string.error);
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, textError, duration);
+                    toast.show();
+
+                    toast.setGravity(Gravity.BOTTOM | Gravity.BOTTOM, 0, 0);
+
+                } else {
+
+                    String build;
+
+                    build = congratulation.getText().toString() + " " + fText + " " + lText;
+
+                    congratulation.setText(build);
+
+                    congratulation.setVisibility(View.VISIBLE);
+
+                }
+
+            }
+        });
+
     }
 }

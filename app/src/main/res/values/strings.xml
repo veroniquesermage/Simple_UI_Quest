@@ -5,4 +5,6 @@
     <string name="be_wilder">Yes, I want to be a wilder!</string>
     <string name="accept">Accept</string>
     <string name="welcome">Welcome to the Wild Code School</string>
+    <string name="congrat">Congratulation</string>
+    <string name="error">Please fill your firstname and lastname.</string>
 </resources>
