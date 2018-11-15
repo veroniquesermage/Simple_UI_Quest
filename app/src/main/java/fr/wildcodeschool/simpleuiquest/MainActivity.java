@@ -37,9 +37,14 @@ public class MainActivity extends AppCompatActivity {
 
                     fnTxt.setEnabled(true);
                     lnTxt.setEnabled(true);
+
+                    button.setEnabled(true);
+
+
                 } else {
                     fnTxt.setEnabled(false);
                     lnTxt.setEnabled(false);
+                    button.setEnabled(false);
 
                 }
             }
